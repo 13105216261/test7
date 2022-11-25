@@ -1,0 +1,217 @@
+//#include<stdio.h>
+//#include<stdlib.h>
+////数组指针的用法
+////参数是指针的用法
+//void print(int(*pa)[5], int x, int y)
+//{
+//	int i = 0;
+//	for (i = 0; i < x; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < y; j++)
+//		{
+//			printf("%d", (pa[i][j]));
+//			printf("%d", *(pa[i] + j));
+//			printf("%d", *(*(pa + i)+j));
+//			printf("%d ",(*(pa+i))[j]);
+//		}
+//		printf("\n");
+//	}
+//
+//}
+//int main()
+//{
+//	int arr[3][5] = { { 1, 2, 3, 4, 5 }, { 2, 3, 4, 5, 6 }, {3,4,5,6,7} };
+//	print (arr, 3, 5);
+	//int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	//int *p = &arr;
+	//int i = 0;
+	//for (i = 0; i < 10; i++)
+	//{
+		/*printf("%d\n",p[i] );
+		printf("%d\n",*(p+i));
+		printf("%d\n",arr[i]);
+		printf("%d\n", *(arr+1));*/
+	/*}*/
+//	system("pause");
+//	return 0;
+//}
+//void print1(int arr[3][5] ,int x, int y)
+//{
+//	int i = 0;
+//	for (i = 0; i <x; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < y; j++)
+//		{
+//			printf("%d ",arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	/*int arr[10] = { 1, 2, 3, 4, 5 ,6,7,8,9,10};*/
+//	int arr[3][5] = { { 1, 2, 3, 4, 5 }, { 2,3,4,5,6 }, { 3,4,5,6,7} };
+//	print1(arr , 3,5);//arr-数组名-数组名就是首元素地址
+	/*int * p=&arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d",*(p+i) );
+	}*/
+	/*int(*pa)[10] = &arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", *(*pa+i));
+	}*/
+	/*for (i = 0; i < 10; i++)
+	{
+		printf("%d", (*pa)[i]);
+	}*/
+	/*system("pause");
+	return 0;
+}*/
+//int main()
+//{
+//	//int *p = NULL;
+//	//char *pc = NULL;
+//	////arr-首元素地址
+//	////&arr[0]-首元素的地址
+//	////&arr-数组的地址
+//	//int arr[10] ={1,2,3,4,5,6,7,8,9,10};
+//	//int (*pa)[10] = &arr;
+//	//char *arr[5] ;
+//	//char*(*pa)[5] = &arr;
+//	int arr[20] = { 0 };
+//	int (*pa)[20]=&arr;
+//	system("pause");
+//	return 0;
+//}
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[] = "abcdef";
+//	const char *p1 = "abcdef";
+//	const char *p2 = "abcdef";
+//	if (p1 == p2)
+//	{
+//		printf("hehe\n");
+//	}
+//	else
+//	{
+//		printf("haha\n");
+//	}
+//	/*if (arr1 == arr2)
+//	{
+//		printf("hehe\n");
+//	}
+//	else
+//	{
+//		printf("haha\n");
+//	}*/
+//	system("pause");
+//	return 0;
+//}
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<Windows.h>
+//#pragma warning	(disable:4996)
+//int main()
+//{
+	//1.编写hello world
+	/*printf("Hello World!\n");*/
+	//2,编写一个程序，从标准输入读取几行输入。
+	//每行输入都要打印到标准输出上
+	//前面要加上行号，
+	//用while循环
+	//循环体输入行的长度没有上限
+	//int lable = 1;
+	//int row = 1;
+	//int ch = 1;
+	//while ((ch=getchar())!=EOF)
+	//{
+	//	if (lable)
+	//	{
+	//		printf("%d",row);
+	//		lable = 0;
+	//		row++;
+	//	}
+	//	putchar(ch);
+	//	if (ch == '\n')
+	//		lable = 1;
+	//}
+
+//	system("pause");
+//	return 0;
+//}
+//编写一个程序，从标准输入读取一些字符，并把它们写到标准输出中。它同时应该计算checksum（校验和）值
+//并写到这些字符的后面
+//checksum用一个sign char 类型的变量进行计算，它初始为-1
+//当每个字符从标准输入读取时，它的值就被加入到checksum中，如果checksum变量产生了溢出
+//这些溢出就会被忽略。当所有的字符均被写入后，程序以十进制的整数的形式打印checksum的值
+//它可能是负值。注意，在checksum后面要添加一个换行符
+//在使用ASCII码的计算，在包含“hello world!”这几个词并以换行符结尾的文件上运行这个程序应该产生下列输出：
+//Hello world！
+//102
+//#include<stdlib.h>
+//#include<stdio.h>
+//int main()
+//{
+//	signed char checksum = -1;
+//	signed char  c;
+//	while ((c = getchar()) != '\n')
+//	{
+//		checksum += c;
+//		printf("checksum:%d",checksum ,c);
+//	}
+//	checksum += c;
+//	printf("\n%d\n",checksum);
+//	/*int ch;
+//	while ((ch = getchar()) != '$')
+//	{
+//		putchar(ch);
+//	}*/
+//	/*int sum = 0;
+//	sum=putchar('a');
+//	printf("%d", sum);*/
+//	system("pause");
+//	return 0;
+//}
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+{/*
+	char arr[] = "abcde";
+	char* pa = arr;
+	printf("%s\n", arr);
+	printf("%s\n", pa);*/
+		/*int a = 20;
+		int b = 30;
+		int c = 40;
+		int d = 50;
+		int* arr[4] = { &a, &b, &c, &d };
+		int i = 0;
+		for (i = 0; i < 4; i++)
+		{
+			printf("%d ", *(arr[i]));
+		}*/
+	/*int arr1[] = { 1, 2, 3, 4, 5 };
+	int arr2[] = { 2, 3, 4, 5, 6 };
+	int arr3[] = { 3, 4, 5, 6, 7 };
+	int* parr[] = { arr1, arr2, arr3 };
+	int i = 0;
+	for (i = 0; i<3; i++)
+	{
+		int j = 0;
+			for (j = 0; j<5; j++)
+			{
+				printf("%d ", *(parr[i] + j));
+			}
+			printf("\n");
+		}
+	system("pause");
+	return 0;
+}*/
